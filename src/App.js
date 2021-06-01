@@ -43,8 +43,7 @@ function App() {
 
   const onClear = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
-    setCartItems(cartItems.forEach((x) => x.id === product.id ? {...exist, qty: 0 } : x)
-    );
+   setCartItems(cartItems.map((x) => x.id !== product.id));
   }
 
   
