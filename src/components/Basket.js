@@ -59,9 +59,9 @@ export default function Basket(props) {
               your total : ${" "}
               <span className="cart-total">{itemsPrice.toFixed(2)}</span>
             </h3>
-            {/* <button onClick={onClear} className="clear-cart banner-btn">
+            <button onClick={onClear} className="clear-cart banner-btn">
               clear cart
-            </button> */}
+            </button>
           </div>
         </div>
       </div>

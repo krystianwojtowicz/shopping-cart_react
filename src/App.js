@@ -54,8 +54,7 @@ function App() {
   };
 
   const onClear = (product) => {
-    const exist = cartItems.find((x) => x.id === product.id);
-    setCartItems(cartItems.map((x) => x.id !== product.id));
+    setCartItems([]);
   };
 
   return (
