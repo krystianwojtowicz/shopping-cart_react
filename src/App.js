@@ -1,10 +1,12 @@
-import Header from './components/Header';
-import Main from './components/Main';
-import Basket from './components/Basket';
-import data from './data';
-import { useState, useEffect } from 'react';
+import Header from "./components/Header";
+import Main from "./components/Main";
+import Basket from "./components/Basket";
+import data from "./data";
+import { useState, useEffect } from "react";
 
-const cartFromLocalStorage = JSON.parse(localStorage.getItem('cartItems') || '[]');
+const cartFromLocalStorage = JSON.parse(
+  localStorage.getItem("cartItems") || "[]"
+);
 
 function App() {
   const { products } = data;
@@ -14,7 +16,7 @@ function App() {
   const totalItems = cartItems.reduce((a, c) => a + c.qty, 0);
 
   useEffect(() => {
-    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
 
   const onShow = () => {
@@ -23,53 +25,67 @@ function App() {
   const onAdd = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
     if (exist) {
-      setCartItems(cartItems.map((x) => x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x)
+      setCartItems(
+        cartItems.map((x) =>
+          x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
+        )
       );
     } else {
       setCartItems([...cartItems, { ...product, qty: 1 }]);
     }
   };
 
-  const onRemove = ( product ) => {
+  const onRemove = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
     if (exist.qty === 1) {
       setCartItems(cartItems.filter((x) => x.id !== product.id));
     } else {
       setCartItems(
-        cartItems.map((x) => x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x)
+        cartItems.map((x) =>
+          x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
+        )
       );
     }
   };
 
+  const onRemoveAll = (product) => {
+    const exist = cartItems.find((x) => x.id === product.id);
+    setCartItems(cartItems.filter((x) => x.id !== product.id));
+  };
+
   const onClear = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
-   setCartItems(cartItems.map((x) => x.id !== product.id));
-  }
+    setCartItems(cartItems.map((x) => x.id !== product.id));
+  };
 
-  
   return (
     <div className="App">
-      <nav className='navbar'>
-                <div className="navbar-center">
-                    <span>Mobile phones</span>
-                    <div onClick={onShow} className='cart-btn'>
-                        <span className="nav-icon">
-                            <i className="fas fa-cart-plus"></i>
-                        </span>
-                        <div className="cart-items">
-                            {totalItems ? (
-                                <span>{totalItems}</span>
-                            ) : ('0')}
-                        </div>
-                    </div>
-                </div>
-            </nav>
+      <nav className="navbar">
+        <div className="navbar-center">
+          <span>Mobile phones</span>
+          <div onClick={onShow} className="cart-btn">
+            <span className="nav-icon">
+              <i className="fas fa-cart-plus"></i>
+            </span>
+            <div className="cart-items">
+              {totalItems ? <span>{totalItems}</span> : "0"}
+            </div>
+          </div>
+        </div>
+      </nav>
       <Header cartItems={cartItems} onShow={onShow}></Header>
       {/* <div> */}
-        <Main onAdd={onAdd} products={products} cartItems={cartItems}></Main>
-        <Basket onClear={onClear} onAdd={onAdd} onRemove={onRemove} cartItems={cartItems} isActive={isActive} onShow={onShow}></Basket>
+      <Main onAdd={onAdd} products={products} cartItems={cartItems}></Main>
+      <Basket
+        onClear={onClear}
+        onAdd={onAdd}
+        onRemove={onRemove}
+        onRemoveAll={onRemoveAll}
+        cartItems={cartItems}
+        isActive={isActive}
+        onShow={onShow}
+      ></Basket>
       {/* </div> */}
-
     </div>
   );
 }
