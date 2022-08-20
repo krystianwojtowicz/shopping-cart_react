@@ -1,14 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// import React from "react";
+// import ReactDOM from "react-dom";
+// import "./index.css";
+// import Shop from "./components/Shop";
+// import reportWebVitals from "./reportWebVitals";
 
-ReactDOM.render(
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <Shop />
+//   </React.StrictMode>,
+//   document.getElementById("root")
+// );
+
+import React from "react";
+import { render } from "react-dom";
+import RouteSwitch from "./components/RouteSwitch";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+
+const root = document.getElementById("root");
+render(
   <React.StrictMode>
-    <App />
+    <RouteSwitch />
   </React.StrictMode>,
-  document.getElementById('root')
+  root
 );
 
 // If you want to start measuring performance in your app, pass a function
