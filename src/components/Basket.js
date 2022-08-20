@@ -12,7 +12,7 @@ export default function Basket(props) {
           </span>
           <h2>your cart</h2>
           <div className="cart-content">
-            {cartItems.length === 0 && <div>Cart is Empty</div>}
+            {cartItems.length === 0 && <div>Cart is Emptyy</div>}
             {/* {cartItems.length === 0 && <div>Cart is Empty</div>} */}
             {cartItems.map((item) => (
               <div key={item.id} className="cart-item">
