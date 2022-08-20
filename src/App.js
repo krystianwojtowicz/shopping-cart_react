@@ -57,7 +57,7 @@ function App() {
     <div className="App">
       <nav className="navbar">
         <div className="navbar-center">
-          <span>Mobile phoness</span>
+          <span>Mobile phones</span>
           <div onClick={onShow} className="cart-btn">
             <span className="nav-icon">
               <i className="fas fa-cart-plus"></i>
