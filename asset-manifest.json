@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/ecommerce-react/static/css/main.f3dec0c7.chunk.css",
-    "main.js": "/ecommerce-react/static/js/main.ababa82d.chunk.js",
-    "main.js.map": "/ecommerce-react/static/js/main.ababa82d.chunk.js.map",
-    "runtime-main.js": "/ecommerce-react/static/js/runtime-main.0df1492b.js",
-    "runtime-main.js.map": "/ecommerce-react/static/js/runtime-main.0df1492b.js.map",
-    "static/js/2.5520249f.chunk.js": "/ecommerce-react/static/js/2.5520249f.chunk.js",
-    "static/js/2.5520249f.chunk.js.map": "/ecommerce-react/static/js/2.5520249f.chunk.js.map",
-    "static/js/3.71159a36.chunk.js": "/ecommerce-react/static/js/3.71159a36.chunk.js",
-    "static/js/3.71159a36.chunk.js.map": "/ecommerce-react/static/js/3.71159a36.chunk.js.map",
-    "index.html": "/ecommerce-react/index.html",
-    "static/css/main.f3dec0c7.chunk.css.map": "/ecommerce-react/static/css/main.f3dec0c7.chunk.css.map",
-    "static/js/2.5520249f.chunk.js.LICENSE.txt": "/ecommerce-react/static/js/2.5520249f.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/ecommerce-react/static/media/iphone.df7f7b7c.jpg"
+    "main.css": "/shopping-cart_react/static/css/main.6340cf22.chunk.css",
+    "main.js": "/shopping-cart_react/static/js/main.ababa82d.chunk.js",
+    "main.js.map": "/shopping-cart_react/static/js/main.ababa82d.chunk.js.map",
+    "runtime-main.js": "/shopping-cart_react/static/js/runtime-main.50c9e6cc.js",
+    "runtime-main.js.map": "/shopping-cart_react/static/js/runtime-main.50c9e6cc.js.map",
+    "static/js/2.5520249f.chunk.js": "/shopping-cart_react/static/js/2.5520249f.chunk.js",
+    "static/js/2.5520249f.chunk.js.map": "/shopping-cart_react/static/js/2.5520249f.chunk.js.map",
+    "static/js/3.71159a36.chunk.js": "/shopping-cart_react/static/js/3.71159a36.chunk.js",
+    "static/js/3.71159a36.chunk.js.map": "/shopping-cart_react/static/js/3.71159a36.chunk.js.map",
+    "index.html": "/shopping-cart_react/index.html",
+    "static/css/main.6340cf22.chunk.css.map": "/shopping-cart_react/static/css/main.6340cf22.chunk.css.map",
+    "static/js/2.5520249f.chunk.js.LICENSE.txt": "/shopping-cart_react/static/js/2.5520249f.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/shopping-cart_react/static/media/iphone.df7f7b7c.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.0df1492b.js",
+    "static/js/runtime-main.50c9e6cc.js",
     "static/js/2.5520249f.chunk.js",
-    "static/css/main.f3dec0c7.chunk.css",
+    "static/css/main.6340cf22.chunk.css",
     "static/js/main.ababa82d.chunk.js"
   ]
 }
